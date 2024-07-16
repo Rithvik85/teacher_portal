@@ -9,7 +9,7 @@ class query{
   function insertData($user,$name,$email,$pass){
     $obj = new connection();
     $mysql= $obj->connect();
-    $sql = "INSERT INTO `registor`(username,name,email,password)VALUES('$user','$name','$email', md5('$pass'))";
+    $sql = "INSERT INTO `registor`(username,name,email,password)VALUES('$user','$name','$email', '$pass')";
     $result = $mysql->query($sql);
     return $result;
         }
